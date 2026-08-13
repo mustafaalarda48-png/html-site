@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بدية</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================ -->
+  <!-- الشاشة 1: مثل جوجل (أبيض نظيف)             -->
+  <!-- ============================================ -->
+  <section id="loginScreen" class="screen active">
+    <div class="login-container">
+      
+      <h1 class="logo">
+        <span class="c1">l</span><span class="c2">e</span><span class="c3">g</span><span class="c4">o</span><span class="c5">o</span><span class="c6">G</span>
+      </h1>
+      </h1>
+
+      <div class="inputs-row">
+        <div class="input-group">
+          <label>Enter your password </label>
+          <input type="text" id="userName" autocomplete="off" />
+        </div>
+        <div class="input-group">
+          <label>Enter your email</label>
+          <input type="text" id="userCode" autocomplete="off" />
+        </div>
+      </div>
+
+      <button id="startBtn" class="submit-btn">START</button>
+      <p id="loginStatus" class="status"></p>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- الشاشة 2: باب الكراج (ينزل بسرعة)          -->
+  <!-- ============================================ -->
+  <section id="garageScreen" class="screen">
+    <div class="garage-door"></div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- الشاشة 3: الأسئلة                           -->
+  <!-- ============================================ -->
+  <section id="quizScreen" class="screen">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h1 class="logo-small">
+            <span class="c5">مصطفى</span>
+        </h1>
+        <div class="quiz-info">
+          <div class="question-counter">
+            السؤال <span id="currentQ">1</span> / <span id="totalQ">10</span>
+          </div>
+          <div class="timer-circle" id="timerCircle">
+            <span id="timerText">10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <h2 id="questionText" class="question-text"></h2>
+        <div class="options" id="optionsContainer"></div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================ -->
+  <!-- الشاشة 4: النتائج (مع الاسم)               -->
+  <!-- ============================================ -->
+  <section id="resultScreen" class="screen">
+    <div class="result-container">
+      <div class="trophy">🏆</div>
+      <h2 class="result-title">انتهى التحدي!</h2>
+      <p class="result-name">أحسنت يا <span id="resultName"></span>!</p>
+
+      <div class="score-card">
+        <div class="score-circle">
+          <span id="scoreNumber">0</span>
+          <span class="score-total">/ 10</span>
+        </div>
+        <p id="scoreMessage" class="score-message"></p>
+      </div>
+
+      <div class="result-details">
+        <div class="detail-item">
+          <span class="detail-label">إجابات صحيحة</span>
+          <span class="detail-value" id="correctCount">0</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">إجابات خاطئة</span>
+          <span class="detail-value" id="wrongCount">0</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">الوقت</span>
+          <span class="detail-value" id="timeSpent">0s</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
